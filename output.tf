@@ -1,4 +1,4 @@
-output "namespace_name" {
+output "namespace" {
   value = var.create_namespace ? kubernetes_namespace.this.0.metadata.0.name : var.namespace
 }
 
