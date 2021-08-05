@@ -1,6 +1,6 @@
 variable "create_namespace" {
   description = "Indicates whether to create a Kubernetes namespace or not"
-  type = bool
+  type        = bool
 
   default = true
 }
@@ -42,14 +42,14 @@ variable "key_cert" {
 
 variable "chart_repository" {
   description = "The sealed secrets chart repository"
-  type = string
+  type        = string
 
   default = "https://bitnami-labs.github.io/sealed-secrets"
 }
 
 variable "chart_version" {
   description = "The sealed secrets chart version"
-  type = string
+  type        = string
 
   default = "1.16.1"
 }

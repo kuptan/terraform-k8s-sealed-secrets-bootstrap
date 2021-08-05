@@ -42,7 +42,7 @@ resource "kubernetes_namespace" "this" {
 }
 
 resource "kubernetes_secret" "this" {
-  count      = var.auto_generate_key_cert || (var.key_cert.private_key != "" && var.key_cert.private_cert != "") ? 1 : 0
+  count = var.auto_generate_key_cert || (var.key_cert.private_key != "" && var.key_cert.private_cert != "") ? 1 : 0
 
   metadata {
     name      = "sealed-secret-encryption-key"
