@@ -8,7 +8,6 @@ resource "tls_private_key" "this" {
 resource "tls_self_signed_cert" "this" {
   count = var.auto_generate_key_cert ? 1 : 0
 
-  key_algorithm   = "RSA"
   private_key_pem = tls_private_key.this.0.private_key_pem
 
   subject {
